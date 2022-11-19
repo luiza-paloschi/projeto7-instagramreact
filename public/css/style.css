@@ -403,3 +403,6 @@
   .postSalvo{
     color: black;
   }
+  .likedPost{
+    color: red;
+  }
