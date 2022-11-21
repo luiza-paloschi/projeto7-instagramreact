@@ -87,10 +87,6 @@
     max-width: 614px;
   }
   
-  .sidebar {
-    width: 293px;
-  }
-  
   .stories {
     display: flex;
     align-items: center;
@@ -213,6 +209,7 @@
   }
   
   .sidebar {
+    width: 293px;
     padding-top: 24px;
     position: sticky;
     top: 88px;

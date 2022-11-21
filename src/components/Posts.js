@@ -4,48 +4,43 @@ export default function Posts(){
   const arraypost = [
    {imgUser: "assets/img/meowed.svg", user: "meowed", imgPost: "assets/img/gato-telefone.svg", liked: "respondeai", numLikes:101.523}
  ,  {imgUser: "assets/img/barked.svg", user: "barked", imgPost: "assets/img/dog.svg",  liked: "adorable_animals", numLikes: 99.159}              
-  ]
-    return <div class="posts">
+  ];
+    return (<div class="posts">
           {arraypost.map(post => <Post imgUser = {post.imgUser} user = {post.user} imgPost = {post.imgPost} liked = {post.liked} numLikes = {post.numLikes}/>)}
-  </div>
+  </div>);
 }
 
 
 function Post(props){
-  const [likes, setLikes] = useState(props.numLikes)
-  const [isLiked, setLiked] = useState("heart-outline")
-  const [heartClass, setHeartClass] = useState("unliked")
-  const [bookClass, setbookClass] = useState("unsaved")
-  const [saved, setSave] = useState("bookmark-outline")
+  const [likes, setLikes] = useState(props.numLikes);
+  const [isLiked, setLiked] = useState("heart-outline");
+  const [heartClass, setHeartClass] = useState("unliked");
+  const [bookClass, setbookClass] = useState("unsaved");
+  const [saved, setSave] = useState("bookmark-outline");
 
   function like(elemento){
-
     if(elemento ==="imagem" && isLiked ==="heart"){
-      return
+      return;
     }
-
     if(isLiked==="heart-outline"){ 
-      setLikes(likes + 0.001) 
-      setLiked("heart")
-      setHeartClass("likedPost")
+      setLikes(likes + 0.001);
+      setLiked("heart");
+      setHeartClass("likedPost");
       
     } else{
-      setLiked("heart-outline")
-      setHeartClass("unliked")
-      setLikes(likes - 0.001)
+      setLiked("heart-outline");
+      setHeartClass("unliked");
+      setLikes(likes - 0.001);
     }
-    
   }
 
   function salvar(){
-    
     if(saved ==="bookmark-outline"){ 
-      setSave("bookmark")
-      setbookClass("postSalvo")
-      
+      setSave("bookmark");
+      setbookClass("postSalvo");
     } else{
-      setSave("bookmark-outline")
-      setbookClass("unsaved")
+      setSave("bookmark-outline");
+      setbookClass("unsaved");
     }
   }
  

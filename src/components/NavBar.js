@@ -1,10 +1,10 @@
 export default function NavBar(){
-   return <div class="navbar">
+   return (<div class="navbar">
       <div class="container">
         <div class="logo">
           <ion-icon name="logo-instagram"></ion-icon>
           <div class="separador"></div>
-          <img src="assets/img/logo.png" />
+          <img src="assets/img/logo.png" alt=""/>
         </div>
 
         <div class="logo-mobile">
@@ -12,7 +12,7 @@ export default function NavBar(){
         </div>
 
         <div class="instagram-mobile">
-          <img src="assets/img/logo.png" />
+          <img src="assets/img/logo.png" alt=""/>
         </div>
 
         <div class="pesquisa">
@@ -30,5 +30,5 @@ export default function NavBar(){
           <ion-icon name="paper-plane-outline"></ion-icon>
         </div>
       </div>
-    </div>
+    </div>);
 }

@@ -1,8 +1,8 @@
-import NavBar from "./NavBar"
-import Corpo from "./Corpo"
+import NavBar from "./NavBar";
+import Corpo from "./Corpo";
 
 export default function App(){
-    return <div>
+    return (<div>
             <NavBar />
             <Corpo/>
 
@@ -14,6 +14,5 @@ export default function App(){
       <ion-icon name="heart-outline"></ion-icon>
       <ion-icon name="person-outline"></ion-icon>
     </div>
-  
-    </div>
+    </div>);
 }
