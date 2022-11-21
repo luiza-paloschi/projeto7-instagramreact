@@ -25,14 +25,14 @@ function Post(props){
     }
 
     if(isLiked==="heart-outline"){ 
-      setLikes(((likes * 1000) + 1)/1000)
+      setLikes(likes + 0.001) 
       setLiked("heart")
       setHeartClass("likedPost")
       
     } else{
       setLiked("heart-outline")
       setHeartClass("unliked")
-      setLikes(((likes * 1000) - 1)/1000)
+      setLikes(likes - 0.001)
     }
     
   }
